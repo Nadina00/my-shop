@@ -1,0 +1,16 @@
+.box{
+    margin: 20px;
+    border: solid black 1px;
+    padding: 10px;
+    width: 350px;
+    padding-top: 50px;
+}
+.label{
+    display: block;
+    margin-bottom: 10px;
+}
+.input{
+    border: solid black 1px;
+    border-radius: 5px;
+    width: 300px;
+}

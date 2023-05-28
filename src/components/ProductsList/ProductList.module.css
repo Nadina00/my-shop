@@ -1,0 +1,25 @@
+.box{
+    border: solid black 1px;
+    width: 810px;
+    
+}
+.list{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.itemBox{
+    border: solid black 1px;
+    padding-bottom: 10px;
+}
+.title{
+    font-size: 25px;
+}
+.btn{
+    width: 150pxd;
+    border-radius: 5px;
+}
+.btn:hover,
+.btn:focus{
+    background-color: burlywood;
+}

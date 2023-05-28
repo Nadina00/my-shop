@@ -1,0 +1,18 @@
+.box{
+    display: flex;
+}
+.boxPrice{
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    font-size: 25px;
+}
+.btn{
+    width: 200px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+.btn:hover{
+    background-color: burlywood;
+}

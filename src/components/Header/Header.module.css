@@ -1,0 +1,36 @@
+.box{
+    padding: 20px;
+    max-width: 1200px;
+}
+.btnBox{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.input{
+    width: 600px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.boxLink{
+    display: flex;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+.link{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    margin-right: 10px;
+    
+}
+.link:first-child{
+    border-right: solid black 1px;
+    padding-right: 10px;
+    
+}
+.linkNav{
+    text-decoration: none;
+    color: black;
+}
+

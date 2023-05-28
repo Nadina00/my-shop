@@ -28,7 +28,7 @@ export const Card = ({ product }) => {
       <form>
         <label>
           quantity
-          <input onChange={onChange} className={css.input}></input>
+          <input onChange={onChange} className={css.input} type="number"></input>
         </label>
       </form>  
       <p>total: {!total ? 0 : `${total}`} uah</p>

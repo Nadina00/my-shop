@@ -15,7 +15,7 @@ export const ProductsList = () => {
   const { products, isLoading } = useShop();
   const dispatch = useDispatch()
   const location = useLocation();
-  console.log(location.pathname)
+
 
   useEffect(() =>{
     dispatch(shopOperations.getShopProducts(location.pathname))
@@ -24,8 +24,6 @@ export const ProductsList = () => {
     
   let productList;
 
- 
-  console.log({products});
 
   const onClick = (product) => {
     productList.push(product);

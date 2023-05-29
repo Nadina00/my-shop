@@ -15,7 +15,7 @@ export const ShopCard = () => {
     total = total + t;
   }
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user);
+
 
   const onClick = (e) => {
     dispatch(orderOperations.addOrder({ products, user }));

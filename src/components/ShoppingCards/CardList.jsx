@@ -8,9 +8,7 @@ export const CardList = () =>{
 
   const {products} = useProduct()
  
-  console.log(products)
-
-    return(
+      return(
         <div className={css.box}>
         <ul className={css.list}>
           {products.map((product) => (

@@ -22,11 +22,19 @@ const getShopProducts = createAsyncThunk("shop/getShopProducts", async (id) => {
     console.error(error);
   }
 });
+const getFilterShop = createAsyncThunk("shop/getFilterShop", async (data) => {
+  try {
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 
 const shopOperations = {
   getShop,
-  getShopProducts  
+  getShopProducts,
+  getFilterShop  
   
   };
   

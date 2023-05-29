@@ -4,7 +4,8 @@ import shopOperations from "./shop-operations";
 const initialState = {
   shops: [],
   isLoading: false,
-  products: []
+  products: [],
+  filter: []
 };
 
 const shopSlice = createSlice({
@@ -25,6 +26,13 @@ const shopSlice = createSlice({
       state.products = action.payload;
       state.isLoading = false
     },
+    [shopOperations.getFilterShop.pending]: (state, action) => {
+      state.isLoading = true
+    },
+    [shopOperations.getFilterShop.fulfilled]: (state, action) => {
+      state.filter = action.payload
+      state.isLoading = false
+    }
      },
 });
 export default shopSlice.reducer;

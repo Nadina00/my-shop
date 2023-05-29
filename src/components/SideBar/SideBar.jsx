@@ -18,8 +18,6 @@ export const SideBar = () => {
     dispatch(shopOperations.getShop());
   }, [dispatch]);
 
-  console.log(filter, isLoading);
-
   return (
     <div>
       <Header />

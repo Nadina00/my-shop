@@ -16,7 +16,6 @@ export const Header = () => {
   const handleChange = (e) => {
     e.preventDefault();
     const findShops = e.target.value;
-    console.log(findShops)
     const filterShops = shops.filter(shop => shop.name.toLowerCase().indexOf(findShops.toLowerCase()) !== -1);
     dispatch(shopOperations.getFilterShop(filterShops))
     

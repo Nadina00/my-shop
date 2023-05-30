@@ -54,7 +54,7 @@ export const CustomerData = ({onChange}) => {
         <label className={css.label}>Phone</label>
         <input
           className={css.input}
-          type="number"
+          type="tel"
           onChange={handleChangeValue}
           name="phone"
           required

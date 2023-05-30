@@ -10,28 +10,32 @@ export const Header = () => {
   const location = useLocation();
   const backLinkHref = location.state?.from ?? "/";
   const { shops } = useShop();
-  const dispatch = useDispatch()
-  console.log(shops);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     e.preventDefault();
     const findShops = e.target.value;
-    const filterShops = shops.filter(shop => shop.name.toLowerCase().indexOf(findShops.toLowerCase()) !== -1);
-    dispatch(shopOperations.getFilterShop(filterShops))
-    
+    const filterShops = shops.filter(
+      (shop) => shop.name.toLowerCase().indexOf(findShops.toLowerCase()) !== -1
+    );
+    dispatch(shopOperations.getFilterShop(filterShops));
+  };
+
+  const onChange = () => {
+    localStorage.removeItem("user");
   };
 
   return (
     <div className={css.box}>
       <div className={css.btnBox}>
-        <Link to={backLinkHref} className={css.linkNav}>
+        <Link to={backLinkHref} className={css.linkNav} onClick={onChange}>
           Back
         </Link>
         <Link className={css.linkNav} to={"/shopping"}>
           {" "}
           Go
         </Link>
-        <Link to={"/"} className={css.linkNav}>
+        <Link to={"/"} className={css.linkNav} onClick={onChange}>
           {" "}
           Home
         </Link>
@@ -42,7 +46,7 @@ export const Header = () => {
         </form>
       </div>
       <div className={css.boxLink}>
-        <Link to={"/"} className={css.link}>
+        <Link to={"/"} className={css.link} onClick={onChange}>
           {" "}
           Shop
         </Link>

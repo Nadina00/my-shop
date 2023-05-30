@@ -12,7 +12,6 @@ const orderSlice = createSlice({
   initialState,
   extraReducers: {
     [orderOperations.addOrder.fulfilled]: (state, action) => {
-      console.log(action.payload)
       state.user = action.payload.user;
       state.products =  action.payload.products;
       },

@@ -30,9 +30,7 @@ export const CustomerData = ({onChange}) => {
    
   };
  
-  
-
-  return (
+    return (
     <div className={css.box}>
       <form className={css.form} >
         <label className={css.label}> Name</label>
@@ -41,6 +39,7 @@ export const CustomerData = ({onChange}) => {
           type="text"
           onChange={handleChangeValue}
           name="userName"
+          required
           
         ></input>
         <label className={css.label}> Email</label>
@@ -49,6 +48,7 @@ export const CustomerData = ({onChange}) => {
           type="email"
           onChange={handleChangeValue}
           name="email"
+          required
          
         ></input>
         <label className={css.label}>Phone</label>
@@ -57,6 +57,7 @@ export const CustomerData = ({onChange}) => {
           type="number"
           onChange={handleChangeValue}
           name="phone"
+          required
           
         ></input>
         <label className={css.label}> Address</label>
@@ -65,6 +66,7 @@ export const CustomerData = ({onChange}) => {
           type="text"
           onChange={handleChangeValue}
           name="address"
+          required
          
         ></input>
       </form>

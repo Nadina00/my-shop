@@ -15,9 +15,8 @@ export const ShopCard = () => {
     total = total + t;
   }
   const user = JSON.parse(localStorage.getItem("user"));
-
-
-  const onClick = (e) => {
+  
+   const onClick = (e) => {
     dispatch(orderOperations.addOrder({ products, user }));
     localStorage.clear();
   };
@@ -30,7 +29,14 @@ export const ShopCard = () => {
           <CardList />
           <div className={css.boxPrice}>
             <p className={css.title}> Total price: {total} uah </p>
-            <button className={css.btn} onClick={onClick}>
+            <button
+              className={css.btn}
+              onClick={onClick}
+              disabled={
+                !(products &&
+                user)
+              }
+            >
               Submit
             </button>
           </div>

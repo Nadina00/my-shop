@@ -25,6 +25,9 @@ const productSlice = createSlice({
       state.products = state.products.filter(({ _id }) => _id !== payload);
      
         },
+        [productOperations.clearProduct.fulfilled]: (state, action) =>{
+          state.products = []
+        }
   },
 });
 export default productSlice.reducer;

@@ -31,12 +31,23 @@ const updateQuantityProduct = createAsyncThunk(
       }
     }
   );
+  const clearProduct = createAsyncThunk(
+    "product/clearProduct",
+    async (data) => {
+      try {
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  );
   
 
 const productOperations = {
     addProduct,
     updateQuantityProduct,
-    deleteProduct
+    deleteProduct,
+    clearProduct
   
   };
   

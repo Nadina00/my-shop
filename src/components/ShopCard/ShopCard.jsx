@@ -4,6 +4,7 @@ import { useProduct } from "../../hooks/productHook";
 import css from "./ShopCard.module.css";
 import { useDispatch } from "react-redux";
 import orderOperations from "../../redux/order/order-operations";
+import productOperations from "../../redux/product/product-operations";
 
 export const ShopCard = () => {
   const { products } = useProduct();
@@ -18,13 +19,15 @@ export const ShopCard = () => {
   
    const onClick = (e) => {
     dispatch(orderOperations.addOrder({ products, user }));
+    dispatch(productOperations.clearProduct())
     localStorage.clear();
+    
   };
 
   return (
     <div>
       <div className={css.box}>
-        <CustomerData />
+        <CustomerData/>
         <div>
           <CardList />
           <div className={css.boxPrice}>
